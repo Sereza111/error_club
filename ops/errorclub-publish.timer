@@ -1,0 +1,11 @@
+[Unit]
+Description=Check errorclub GitHub main every two minutes
+
+[Timer]
+OnBootSec=90s
+OnUnitInactiveSec=2min
+AccuracySec=10s
+Unit=errorclub-publish.service
+
+[Install]
+WantedBy=timers.target

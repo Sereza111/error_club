@@ -1,0 +1,27 @@
+.signal-label { position: relative; display: inline-block; white-space: pre; }
+.signal-label__noise { position: absolute; inset: 0; overflow: hidden; opacity: 0; pointer-events: none; }
+.signal-label.is-decoding .signal-label__original { opacity: 0; }
+.signal-label.is-decoding .signal-label__noise { opacity: 1; }
+[data-signal-link] { --terminal-colour: var(--accent, var(--signal, #b8ef8d)); }
+.site-nav a::after { display: none; }
+.site-nav a::before { content: '>'; position: absolute; left: -13px; opacity: 0; }
+.site-nav a:is(:hover, :focus-visible)::before { opacity: 1; color: var(--terminal-colour); }
+.site-nav a:is(:hover, :focus-visible),
+.site-footer__links a:is(:hover, :focus-visible),
+.back-link:is(:hover, :focus-visible),
+.profile-footer a:is(:hover, :focus-visible) { color: var(--terminal-colour); }
+.site-nav a:is(:hover, :focus-visible) .signal-label,
+.site-footer__links a:is(:hover, :focus-visible) .signal-label,
+.back-link:is(:hover, :focus-visible) .signal-label,
+.profile-footer a:is(:hover, :focus-visible) .signal-label,
+.service--active:is(:hover, :focus-visible) .service-action .signal-label,
+.artist-card__link:is(:hover, :focus-visible) .artist-card__info > span .signal-label {
+  color: var(--terminal-ink, #080909);
+  background: var(--terminal-colour);
+  box-shadow: 3px 0 var(--terminal-colour), -3px 0 var(--terminal-colour);
+}
+.artist-card__link:focus-visible { outline: 1px solid var(--signal); outline-offset: 8px; }
+@media (prefers-reduced-motion: reduce) {
+  .signal-label.is-decoding .signal-label__original { opacity: 1; }
+  .signal-label.is-decoding .signal-label__noise { opacity: 0; }
+}

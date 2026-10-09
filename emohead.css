@@ -1,0 +1,36 @@
+.profile--emohead { --accent: #312126; --ink: #312126; --muted: #64716d; --line: #a3b1ab; --terminal-ink: #dae5e2; color-scheme: light; background: #dae5e2; }
+.profile--emohead .profile-art { background: radial-gradient(#3121261c .65px, transparent .9px) 0 0 / 4px 4px; }
+.profile--emohead .profile-art::before { content: ''; position: absolute; inset: 0 auto 0 -21vw; width: 60vw; opacity: .17; background: url('assets/artists/emohead/alternate-print-v33.png') center / cover no-repeat; mask-image: linear-gradient(to right, #000, transparent); }
+.profile--emohead .profile-header { border-bottom: 1px solid var(--ink); margin: 0 3vw; padding-left: 0; padding-right: 0; }
+.profile--emohead .profile-layout { width: 88%; max-width: 1640px; padding: 0; gap: clamp(36px, 5vw, 96px); margin-top: 44px; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); }
+.profile--emohead .portrait { border: 2px solid var(--ink); padding: 9px; background: var(--terminal-ink); box-shadow: 6px 6px 0 #31212620; }
+.emohead-chrome { display: flex; justify-content: space-between; padding: 3px 1px 11px; font: 10px 'DM Mono', monospace; letter-spacing: .07em; }
+.emohead-chrome i { width: 8px; height: 8px; border: 1px solid var(--ink); display: inline-block; margin-left: 5px; }
+.profile--emohead .portrait-frame { position: relative; border-radius: 0; border: 1px solid var(--ink); aspect-ratio: 1 / 1.07; background: var(--terminal-ink); }
+.profile--emohead .portrait-frame > img { filter: none; object-position: center; image-rendering: auto; }
+.profile--emohead .portrait-id { z-index: 2; color: var(--terminal-ink); mix-blend-mode: normal; background: var(--ink); padding: 5px 7px; top: 12px; left: 12px; }
+.profile--emohead .portrait-caption { z-index: 2; background: var(--ink); color: var(--terminal-ink); padding: 10px 12px; font-size: 9px; text-transform: uppercase; }
+.profile--emohead .photo-selector { margin: 12px 1px 2px; }
+.profile--emohead .photo-selector button { border-color: var(--line); filter: grayscale(1); opacity: .7; }
+.profile--emohead .photo-selector button[aria-pressed='true'] { border: 2px solid var(--ink); opacity: 1; }
+.profile--emohead .photo-selector img { image-rendering: auto; }
+.profile--emohead .photo-selector p { color: var(--muted); }
+.profile--emohead .artist-kicker { padding: 0 0 12px; border-left: none; border-bottom: 1px solid var(--ink); font-size: 9px; }
+.profile--emohead h1 { font-family: Georgia, 'Times New Roman', serif; font-size: clamp(66px, 8.6vw, 154px); font-weight: 700; letter-spacing: -.065em; line-height: .92; margin: 25px 0 18px; }
+.profile--emohead .artist-intro { margin-bottom: 28px; font: italic 17px/1.5 Georgia, serif; color: var(--ink); }
+.profile--emohead .service-heading { border-bottom: 2px solid var(--ink); }
+.profile--emohead .service-heading h2 { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; }
+.profile--emohead .service { min-height: 58px; padding: 10px 0; }
+.profile--emohead .service-icon { border-radius: 0; }
+.profile--emohead .service-name { font-size: 14px; }
+.profile--emohead .service--soon { opacity: .68; }
+.profile--emohead .profile-footer { margin: 0 3vw; padding-left: 0; padding-right: 0; border-color: var(--ink); }
+@media (max-width: 760px) {
+  .profile--emohead .profile-layout { width: 100%; grid-template-columns: 1fr; margin-top: 24px; gap: 35px; padding: 0 22px; }
+  .profile--emohead .profile-header { margin: 0 22px; }
+  .profile--emohead .profile-art::before { width: 100vw; left: -45vw; opacity: .12; }
+  .profile--emohead h1 { font-size: clamp(62px, 18vw, 88px); }
+  .profile--emohead .artist-kicker { font-size: 8px; }
+  .profile--emohead .portrait-frame { aspect-ratio: 1 / 1.04; }
+  .profile--emohead .profile-footer { margin: 0 22px; }
+}

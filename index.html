@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#080909">
+    <meta name="description" content="errorclub — независимые артисты, звук и лимитированные объекты.">
+    <title>errorclub</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Space+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=29">
+    <link rel="stylesheet" href="signal.css?v=29">
+  </head>
+  <body>
+    <a class="skip-link" href="#artists">К артистам</a>
+
+    <header class="site-header" data-header>
+      <a class="wordmark" href="#top" aria-label="errorclub, наверх">errorclub<span>/</span></a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <a href="#artists">artists</a>
+        <a href="#objects">objects</a>
+        <a href="#contact">contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" data-field aria-labelledby="hero-title">
+        <video class="hero__video" data-field-video muted loop playsinline preload="none" poster="assets/field/black-hole-v28-poster.webp" aria-hidden="true" tabindex="-1"></video>
+        <div class="hero__shade" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <p class="hero__edition">error archive / 2026</p>
+          <h1 id="hero-title">errorclub</h1>
+          <div class="hero__meta">
+            <p>independent artists<br>sound &amp; limited objects</p>
+            <p>moscow / worldwide<br>roster 04</p>
+          </div>
+        </div>
+
+        <div class="hero__state" aria-hidden="true">
+          <span>field 01</span>
+          <i></i>
+          <span>active</span>
+        </div>
+
+        <a class="hero__next" href="#artists" aria-label="Перейти к артистам" title="Артисты">
+          <span aria-hidden="true">↓</span>
+        </a>
+      </section>
+
+      <section class="artists" id="artists" aria-labelledby="artists-title">
+        <header class="section-heading">
+          <p class="section-index">01 / artists</p>
+          <h2 id="artists-title">current roster</h2>
+          <p class="section-count" data-roster-count>04 artists</p>
+        </header>
+
+        <div class="artist-grid" data-roster>
+          <article class="artist-card" data-artist-card>
+            <a class="artist-card__link" href="artists/moralophobia/" aria-label="Открыть карточку моралофобии">
+              <div class="artist-card__media">
+                <img class="artist-card__image artist-card__image--base" src="assets/artists/moralophobia/portrait.webp" alt="Моралофобия, портрет с забинтованной рукой" loading="eager">
+                <img class="artist-card__image artist-card__image--alternate" src="assets/artists/moralophobia/alternate.webp" alt="" loading="lazy" aria-hidden="true">
+                <span class="artist-card__number">01</span>
+                <span class="artist-card__external" aria-hidden="true">↗</span>
+              </div>
+              <div class="artist-card__info">
+                <div>
+                  <h3>моралофобия</h3>
+                  <p>artist / noise pop</p>
+                </div>
+                <span>открыть артиста</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="artist-card" data-artist-card>
+            <a class="artist-card__link" href="artists/emohead/" aria-label="Открыть карточку emohead">
+              <div class="artist-card__media">
+                <img class="artist-card__image artist-card__image--base" src="assets/artists/emohead/portrait.webp" alt="emohead, портрет в чёрной одежде" loading="lazy">
+                <img class="artist-card__image artist-card__image--alternate" src="assets/artists/emohead/alternate.webp" alt="" loading="lazy" aria-hidden="true">
+                <span class="artist-card__number">02</span>
+                <span class="artist-card__external" aria-hidden="true">↗</span>
+              </div>
+              <div class="artist-card__info">
+                <div>
+                  <h3>emohead</h3>
+                  <p>artist / cloud rap</p>
+                </div>
+                <span>открыть артиста</span>
+              </div>
+            </a>
+          </article>
+
+          <article class="artist-card artist-card--woomzzzoid" data-artist-card>
+            <a class="artist-card__link" href="artists/woomzzzoid/" aria-label="Открыть карточку woomzzzoid:">
+              <div class="artist-card__media">
+                <img class="artist-card__image artist-card__image--base" src="assets/artists/woomzzzoid/portrait.webp" alt="woomzzzoid:, портрет в полосатом свитере" loading="lazy">
+                <img class="artist-card__image artist-card__image--alternate" src="assets/artists/woomzzzoid/alternate.webp" alt="" loading="lazy" aria-hidden="true">
+                <span class="artist-card__number">03</span>
+                <span class="artist-card__external" aria-hidden="true">↗</span>
+              </div>
+              <div class="artist-card__info">
+                <div>
+                  <h3>woomzzzoid:</h3>
+                  <p>artist / errorclub</p>
+                </div>
+                <span>открыть артиста</span>
+              </div>
+            </a>
+          </article>
+          <article class="artist-card artist-card--katarsis" data-artist-card>
+            <a class="artist-card__link" href="artists/katarsis/" aria-label="Открыть карточку катарсиса">
+              <div class="artist-card__media">
+                <img class="artist-card__image artist-card__image--base" src="assets/artists/katarsis/casual.webp" alt="катарсис, повседневный портрет" loading="lazy" width="728" height="807">
+                <img class="artist-card__image artist-card__image--alternate" src="assets/artists/katarsis/colour.webp" alt="" loading="lazy" aria-hidden="true" width="1200" height="1200">
+                <span class="artist-card__number">04</span>
+                <span class="artist-card__external" aria-hidden="true">↗</span>
+              </div>
+              <div class="artist-card__info">
+                <div><h3>катарсис</h3><p>artist / errorclub</p></div>
+                <span>открыть артиста</span>
+              </div>
+            </a>
+          </article>
+        </div>
+      </section>
+
+      <section class="objects" id="objects" aria-labelledby="objects-title">
+        <header class="section-heading section-heading--objects">
+          <p class="section-index">02 / objects</p>
+          <h2 id="objects-title">physical signal</h2>
+          <p class="section-count">drop 001 / developing</p>
+        </header>
+
+        <div class="object-list" aria-label="Будущие категории мерча">
+          <div class="object-row">
+            <span>01</span>
+            <h3>candles</h3>
+            <p>light / scent / numbered series</p>
+            <b>in development</b>
+          </div>
+          <div class="object-row">
+            <span>02</span>
+            <h3>NFC objects</h3>
+            <p>physical access / private media</p>
+            <b>in development</b>
+          </div>
+          <div class="object-row">
+            <span>03</span>
+            <h3>wearables</h3>
+            <p>limited garments / archive marks</p>
+            <b>in development</b>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <a class="site-footer__brand" href="#top">errorclub/</a>
+      <p>independent sound and objects</p>
+      <div class="site-footer__links">
+        <a href="https://soundcloud.com/moralophobia" target="_blank" rel="noopener noreferrer">soundcloud</a>
+        <a href="mailto:contact@errorclub.club">contact</a>
+      </div>
+      <span>© 2026</span>
+    </footer>
+
+    <script src="app.js?v=28" defer></script>
+    <script src="signal.js?v=29" defer></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+* { box-sizing: border-box; }
+:root { color-scheme: dark; font-family: 'Space Grotesk', Arial, sans-serif; }
+body { margin: 0; min-width: 300px; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; cursor: pointer; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.profile { --accent: #aaf7eb; --ink: #e5f3ef; --muted: #8eaaa3; --line: #274039; color: var(--ink); background: #080f0e; }
+.profile-header, .profile-footer { display: flex; justify-content: space-between; align-items: center; padding: 30px 4vw; position: relative; z-index: 2; }
+.brand { font-size: 21px; font-weight: 700; letter-spacing: -.7px; }
+.brand span { color: var(--accent); }
+.back-link, .profile-footer, .artist-kicker, .portrait-id, .portrait-caption, .photo-selector, .service-heading > span, .service-action, .availability { font-family: 'DM Mono', monospace; font-size: 10px; }
+.back-link { display: flex; gap: 10px; align-items: center; text-transform: uppercase; }
+.back-link > span[aria-hidden] { font-size: 20px; color: var(--accent); }
+.profile-layout { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 7vw; max-width: 1140px; margin: 58px auto 70px; padding: 0 36px; align-items: start; }
+.portrait-frame { position: relative; aspect-ratio: 4/5; overflow: hidden; background: #131917; }
+.portrait-frame > img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: center 35%; transition: opacity .18s; }
+.portrait-frame > img.is-loading { opacity: .35; }
+.portrait-id { position: absolute; top: 18px; left: 18px; color: white; mix-blend-mode: difference; }
+.portrait-caption { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(transparent, #000b); padding: 42px 20px 18px; color: white; letter-spacing: .1em; display: flex; justify-content: space-between; }
+.photo-selector { display: flex; gap: 9px; align-items: center; margin-top: 16px; }
+.photo-selector button { position: relative; padding: 0; border: 1px solid transparent; opacity: .45; background: none; color: white; }
+.photo-selector button[aria-pressed='true'] { border-color: var(--accent); opacity: 1; }
+.photo-selector img { display: block; width: 48px; height: 56px; object-fit: cover; }
+.photo-selector button span { position: absolute; bottom: 3px; right: 3px; font: 9px monospace; text-shadow: 0 1px 3px black; }
+.photo-selector p { margin-left: auto; line-height: 1.8; color: var(--muted); text-align: right; }
+.artist-kicker { display: flex; justify-content: space-between; gap: 15px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; }
+.artist-detail h1 { font-size: clamp(32px, 4.8vw, 66px); font-weight: 500; letter-spacing: -.065em; margin: 24px 0 12px; line-height: 1.06; overflow-wrap: anywhere; }
+.artist-intro { margin: 0 0 48px; color: var(--muted); font-size: 13px; }
+.service-heading { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+.service-heading h2 { font-size: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: .12em; margin: 0; }
+.service-heading > span { color: var(--muted); }
+.service { display: flex; align-items: center; gap: 15px; min-height: 67px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.service-icon { width: 28px; height: 28px; display: grid; place-items: center; border: 1px solid currentColor; border-radius: 50%; font: 9px 'DM Mono', monospace; flex-shrink: 0; }
+.service-name { font-size: 15px; }
+.service-action { margin-left: auto; display: flex; align-items: center; gap: 18px; }
+.service-action b { font-size: 19px; font-weight: 400; }
+.service--active { position: relative; transition: color .12s, background-color .12s; }
+.service--active .service-action { color: var(--accent); }
+.service--active:hover, .service--active:focus-visible { color: var(--accent); background: color-mix(in srgb, var(--accent) 7%, transparent); }
+.service--active::before { content: ''; position: absolute; inset: 12px auto 12px -10px; width: 2px; background: var(--accent); opacity: 0; }
+.service--active:hover::before, .service--active:focus-visible::before { opacity: 1; }
+.service--active:is(:hover, :focus-visible) .service-icon { background: var(--accent); color: var(--terminal-ink, #080909); border-color: var(--accent); }
+.service--soon { color: var(--muted); opacity: .52; }
+.service--soon .service-action { font-size: 9px; text-transform: uppercase; }
+.availability { color: var(--muted); font-size: 9px; line-height: 1.8; margin-top: 20px; max-width: 330px; }
+.profile-footer { border-top: 1px solid var(--line); color: var(--muted); padding-top: 24px; padding-bottom: 24px; text-transform: uppercase; }
+.profile-art { position: fixed; inset: 0; overflow: hidden; pointer-events: none; }
+.profile--woomzzzoid .profile-art { background: radial-gradient(ellipse at 22% 48%, #124f432b, transparent 55%), repeating-linear-gradient(125deg, transparent 0 119px, #91f6e408 120px, transparent 121px 196px); }
+.profile--woomzzzoid .profile-art span { position: absolute; width: 36vw; height: 95vh; left: 2%; top: 9%; opacity: .13; background: var(--accent); clip-path: polygon(0 12%, 20% 2%, 15% 38%, 42% 18%, 29% 58%, 63% 35%, 56% 72%, 100% 42%, 69% 88%, 35% 100%, 49% 65%, 13% 86%, 25% 47%, 0 66%); }
+.profile--woomzzzoid .portrait-frame { clip-path: polygon(0 0, 92% 0, 100% 7%, 100% 100%, 7% 100%, 0 94%); border: 1px solid #73d6be66; }
+.profile--woomzzzoid h1 { color: var(--accent); transform: skew(-6deg); font-weight: 600; letter-spacing: -.07em; }
+.profile--woomzzzoid .service--active { border-bottom-color: #639a873f; }
+.profile--woomzzzoid .service--active .service-icon { border-radius: 0; transform: rotate(-4deg); }
+.profile--moralophobia { --accent: #d8ff00; --accent-hot: #ff35b8; --ink: #edf0e4; --muted: #9ea996; --line: #364032; --terminal-ink: #0a0d0a; background: #0b0e0b; color-scheme: dark; }
+.profile--moralophobia .profile-art {
+  background:
+    radial-gradient(circle at 78% 18%, #d8ff0018 0 1px, transparent 2px 100%),
+    linear-gradient(117deg, transparent 0 46%, #d8ff0010 46.1% 46.25%, transparent 46.4% 100%),
+    repeating-linear-gradient(6deg, transparent 0 65px, #d8ff0009 66px, transparent 67px 69px);
+}
+.profile--moralophobia .profile-art::after { position: absolute; inset: 14% 7% auto auto; width: 18vw; height: 1px; background: var(--accent-hot); box-shadow: 0 8px var(--accent), 0 16px var(--accent-hot); content: ''; opacity: .65; transform: rotate(-8deg); }
+.profile--moralophobia .portrait { transform: rotate(-1.5deg); padding: 13px 13px 0; background: #f0f1e9; box-shadow: 7px 9px 0 #d8ff0022, 0 0 0 1px #d8ff0050; }
+.profile--moralophobia .portrait-frame { border: 1px solid #d8ff00; box-shadow: 5px 5px 0 #ff35b866; }
+.profile--moralophobia .portrait-frame > img { filter: saturate(.42) contrast(1.08); }
+.profile--moralophobia .portrait-id { color: var(--accent); mix-blend-mode: normal; text-shadow: 1px 1px 0 #090c09; }
+.profile--moralophobia .portrait-caption { color: var(--accent); background: linear-gradient(transparent, #090c09e8); text-shadow: 1px 1px 0 #090c09; }
+.profile--moralophobia .photo-selector button[aria-pressed='true'] { border-color: #354022; box-shadow: 3px 3px 0 var(--accent-hot); }
+.profile--moralophobia .photo-selector p { color: #626653; }
+.profile--moralophobia h1 { font-family: Georgia, 'Times New Roman', serif; color: var(--accent); font-size: clamp(30px,4vw,52px); letter-spacing: -.055em; font-style: italic; text-shadow: 3px 3px 0 #ff35b844; }
+.profile--moralophobia .artist-kicker { color: #c4d39c; border-left: 2px solid var(--accent-hot); padding-left: 12px; }
+.profile--moralophobia .service-heading { border-color: var(--accent); }
+.profile--moralophobia .service-heading h2 { color: var(--accent); }
+.profile--moralophobia .service-icon { border-style: dashed; }
+.profile--moralophobia .service--active { border-bottom-color: #d8ff0055; }
+.profile--moralophobia .service--active .service-action { color: var(--accent); }
+.profile--moralophobia .service--active:hover, .profile--moralophobia .service--active:focus-visible { color: var(--accent); background: #d8ff0010; }
+.profile--moralophobia .service--active::before { background: var(--accent-hot); }
+.profile--moralophobia .photo-selector { padding-bottom: 3px; }
+.profile--moralophobia .profile-footer { border-color: #d8ff0055; }
+.profile--emohead { --accent: #c7d5e9; --ink: #e3e8ed; --muted: #919dab; --line: #343b46; background: #14191f; }
+.profile--emohead .profile-art { background: radial-gradient(ellipse at 20% 26%, #52677a40, transparent 53%), linear-gradient(145deg,#2c374222,transparent 55%); }
+.profile--emohead .portrait-frame { border-radius: 46% 46% 2px 2px; border: 1px solid #8a9cac55; }
+.profile--emohead .portrait-frame > img { filter: saturate(.2); }
+.profile--emohead h1 { font-size: clamp(46px,6.4vw,82px); font-weight: 400; letter-spacing: -.07em; }
+.profile--emohead .artist-kicker { border-left: 1px solid var(--accent); padding-left: 12px; }
+.profile--katarsis { --accent: #704936; --ink: #302d2a; --muted: #756e66; --line: #cbc6be; --terminal-ink: #f2eee7; background: #e6e2da; color-scheme: light; }
+.profile--katarsis .profile-art { background: linear-gradient(90deg, transparent 49.95%, #81766913 50%, transparent 50.05%), repeating-linear-gradient(0deg, transparent 0 189px, #8176690b 190px, transparent 191px); }
+.profile--katarsis .portrait-frame { padding: 9px; background: #f5f2eb; border: 1px solid #c7bfb3; box-shadow: 12px 12px 0 #3a302a0b; }
+.profile--katarsis .portrait-frame > img { object-position: center 35%; }
+.profile--katarsis h1 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; letter-spacing: -.06em; }
+.profile--katarsis .artist-kicker { border-top: 1px solid var(--line); padding-top: 12px; }
+.profile--katarsis .service-icon { border-radius: 0; }
+.profile--katarsis .photo-selector { flex-wrap: wrap; }
+.profile--katarsis .photo-selector p { font-size: 9px; }
+@media(max-width: 760px) {
+  .profile-header { padding: 24px; }
+  .profile-layout { max-width: 490px; grid-template-columns: 1fr; gap: 32px; margin: 14px auto 48px; padding: 0 24px; }
+  .artist-detail h1 { font-size: clamp(32px,10.5vw,58px); margin-top: 20px; }
+  .artist-intro { margin-bottom: 34px; }
+  .portrait-frame { aspect-ratio: 1 / 1.1; }
+  .profile--woomzzzoid .profile-art span { width: 85vw; }
+  .profile--moralophobia h1 { font-size: clamp(29px,8.9vw,44px); }
+  .profile--emohead h1 { font-size: 68px; }
+  .artist-kicker { font-size: 8px; }
+  .profile-footer { padding: 22px 24px; font-size: 8px; }
+  .service-name { font-size: 14px; }
+}
+@media(prefers-reduced-motion: reduce) { *, *::before, *::after { transition: none !important; } }

@@ -1,0 +1,16 @@
+[
+  "index.html", "styles.css", "app.js", "artist.css", "artist.js",
+  "artist-player.css", "artist-player.js", "emohead.css", "signal.css", "signal.js",
+  "artists/moralophobia/index.html", "artists/emohead/index.html",
+  "artists/woomzzzoid/index.html", "artists/katarsis/index.html",
+  "assets/favicon.svg", "assets/grain.svg",
+  "assets/field/black-hole-v28-720p.mp4", "assets/field/black-hole-v28-mobile.mp4",
+  "assets/field/black-hole-v28-poster.webp",
+  "assets/artists/moralophobia/portrait.webp", "assets/artists/moralophobia/alternate.webp",
+  "assets/artists/emohead/portrait.webp", "assets/artists/emohead/alternate.webp",
+  "assets/artists/emohead/portrait-print-v33.png", "assets/artists/emohead/alternate-print-v33.png",
+  "assets/artists/woomzzzoid/portrait.webp", "assets/artists/woomzzzoid/alternate.webp",
+  "assets/artists/katarsis/portrait.webp", "assets/artists/katarsis/window.webp",
+  "assets/artists/katarsis/colour.webp", "assets/artists/katarsis/casual.webp",
+  "assets/audio-analysis/emohead-plevat.json"
+]

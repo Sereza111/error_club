@@ -1,0 +1,22 @@
+[Unit]
+Description=Publish errorclub static files from GitHub main
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=errorclub-publisher
+Group=errorclub-publisher
+ExecStart=/usr/bin/python3 /usr/local/libexec/errorclub-publish.py
+TimeoutStartSec=240
+StateDirectory=errorclub-publisher
+StateDirectoryMode=0750
+UMask=0022
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ReadWritePaths=/var/www/errorclub.club
+CapabilityBoundingSet=
+RestrictAddressFamilies=AF_INET AF_INET6 AF_UNIX
