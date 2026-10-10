@@ -14,14 +14,14 @@ async function setup({ missingWave = false } = {}) {
     setAttribute(k, v) { this[k] = v; }, addEventListener(k, cb) { this[k] = cb; },
     append(child) { bars.push(child); } });
   const button = element(), status = element(), iframe = element();
-  const player = { dataset: { track: wave.track, trackTitle: 'track', waveform: '/wave.json' },
+  const player = { dataset: { track: wave.track, trackTitle: 'track', spectrum: '/wave.json' },
     querySelector: selector => selector === 'iframe' ? iframe : selector.includes('toggle') ? button : status };
   const widget = { bind(k, cb) { events[k] = cb; }, setVolume() {}, play() {},
     pause() { pauses++; }, seekTo(value) { position = value; },
     getPosition(cb) { cb(position); }, isPaused(cb) { cb(true); } };
   const Widget = () => widget;
   Widget.Events = Object.fromEntries(['READY', 'PLAY', 'PAUSE', 'FINISH', 'PLAY_PROGRESS', 'SEEK', 'ERROR'].map(x => [x, x]));
-  const document = { hidden: false, body: { classList: { contains: () => true, toggle() {} }, prepend() {} },
+  const document = { hidden: false, body: { classList: { contains: () => true, toggle() {} }, prepend() {}, addEventListener() {} },
     querySelector: () => player, createElement: element, addEventListener: (k, cb) => { listeners[k] = cb; } };
   const context = { document, window: { SC: { Widget }, addEventListener: (k, cb) => { listeners[k] = cb; } },
     performance: { now: () => now }, matchMedia: () => motion, URLSearchParams,
@@ -30,7 +30,7 @@ async function setup({ missingWave = false } = {}) {
     cancelAnimationFrame: id => frames.delete(id),
     fetch: async () => ({ ok: !missingWave, json: async () => wave }) };
   vm.runInNewContext(code, context);
-  await new Promise(setImmediate);
+  await new Promise(resolve => setTimeout(resolve, 25));
   return { events, listeners, frames, bars, button, status, player, motion, document,
     values: () => bars.map(b => b.style['--scale']),
     tick(ms = 16) { now += ms; const pending = [...frames.values()]; frames.clear(); pending.forEach(cb => cb(now)); },

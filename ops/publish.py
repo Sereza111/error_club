@@ -30,7 +30,7 @@ def safe_target(name):
     if (not re.fullmatch(r"[A-Za-z0-9_./-]+", name) or path.is_absolute()
             or any(part in {"", ".", ".."} for part in name.split("/"))):
         raise ValueError(f"Unsafe path: {name}")
-    if path.suffix not in {".html", ".css", ".js", ".json", ".svg", ".webp", ".png", ".jpg", ".mp4", ".woff2"}:
+    if path.suffix not in {".html", ".css", ".js", ".json", ".svg", ".webp", ".png", ".jpg", ".mp3", ".mp4", ".woff2"}:
         raise ValueError(f"Not a static asset: {name}")
     if len(path.parts) > 1 and path.parts[0] not in {"artists", "assets"}:
         raise ValueError(f"Unexpected directory: {name}")

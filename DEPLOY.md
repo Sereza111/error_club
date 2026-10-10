@@ -48,11 +48,13 @@ cat /var/lib/errorclub-publisher/deployed-revision
 не удаляются автоматически. Для обычного отката используй `git revert` и push.
 
 После публикации проверить публичные страницы артистов, фотографии,
-`assets/audio-analysis/emohead-plevat.json` и HTTP Range для MP4. Успешный push
+`assets/audio-analysis/emohead-plevat.json`, спектрограмму woomzzzoid и HTTP Range для MP4. Успешный push
 сам по себе не подтверждает публикацию: сверяй `deployed-revision` и живой сайт.
 
 ## Исходники рендера
 
 Фон v28 — 30 секунд Blender, 24 fps. На сайте используются desktop/mobile MP4
 и WebP-постер. Сцены Blender и промежуточные PNG остаются в локальном архиве и
-не публикуются. При reduced motion фон остаётся статичным.
+не публикуются. WAV `(не)друг` также остаётся локальным: на сайт попадает только
+сжатый MP3, нужный для встроенного плеера, и производные спектральные данные.
+При reduced motion фон остаётся статичным.

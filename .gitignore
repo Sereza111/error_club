@@ -29,7 +29,9 @@
 !/tools/check_site.py
 !/tools/test_player.cjs
 !/tools/test_publisher.py
+!/tools/build_woomzzzoid_spectrum.py
 **/__pycache__/
 **/.env*
 **/*.pem
 **/*.key
+**/*.wav

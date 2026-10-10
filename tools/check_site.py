@@ -26,7 +26,7 @@ def reference(source, value):
 class Links(HTMLParser):
     def handle_starttag(self, tag, attrs):
         for name, value in attrs:
-            if name in {"src", "href", "data-photo", "data-waveform"} and value:
+            if name in {"src", "href", "data-photo", "data-waveform", "data-spectrum", "data-spectrum-field"} and value:
                 reference(self.source, value)
 
 
@@ -49,4 +49,9 @@ for name in manifest:
 wave = json.loads((ROOT / "assets/audio-analysis/emohead-plevat.json").read_text())
 assert wave["duration"] > 0 and len(wave["samples"]) > 100
 assert all(isinstance(n, (int, float)) and n >= 0 for n in wave["samples"])
-print(f"OK: {len(manifest)} published files; local references and waveform verified")
+woom = json.loads((ROOT / "assets/artists/woomzzzoid/ne-drug-spectrum.json").read_text())
+assert 150_000 < woom["duration"] < 153_000, "woom duration must be milliseconds"
+assert len(woom["frames"]) > 100 and len(woom["frames"][0]) == 56
+assert len(woom["energy"]) == len(woom["frames"])
+assert all(0 <= level <= 255 for frame in woom["frames"] for level in frame)
+print(f"OK: {len(manifest)} published files; local references and audio analyses verified")

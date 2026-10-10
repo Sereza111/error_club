@@ -13,11 +13,14 @@
   <link rel="stylesheet" href="../../artist.css?v=29">
   <link rel="stylesheet" href="../../signal.css?v=29">
   <link rel="stylesheet" href="../../artist-player.css?v=33">
+  <link rel="stylesheet" href="../../woomzzzoid.css?v=2">
   <script src="../../signal.js?v=29" defer></script>
   <script src="../../artist.js?v=28" defer></script>
-  <script src="../../artist-player.js?v=33" defer></script>
+  <script src="../../artist-player.js?v=35" defer></script>
+  <script src="../../woom-spectrum.js?v=1" defer></script>
 </head>
 <body class="profile profile--woomzzzoid">
+  <canvas class="woom-spectrum-field" data-spectrum-field="../../assets/artists/woomzzzoid/ne-drug-spectrum.json" aria-hidden="true"></canvas>
   <div class="profile-art" aria-hidden="true"><span></span><i></i></div>
   <header class="profile-header">
     <a class="brand" href="../../">errorclub<span>/</span></a>
@@ -44,10 +47,10 @@
       <div class="artist-kicker"><span>errorclub / artist 03</span><span>своя частота</span></div>
       <h1 id="artist-name">woomzzzoid:</h1>
       <p class="artist-intro">Музыка и всё, что рядом.</p>
-      <section class="intro-player" data-intro-player data-track="https://soundcloud.com/wmzd/magaz-remiks-by-womza" data-track-title="магаз (ремикс by womza)" data-state="loading" aria-label="Плеер woomzzzoid">
-        <div class="intro-player__top"><div><p class="intro-player__eyebrow">first signal / 01</p><h2>магаз (ремикс by womza)</h2></div><button class="intro-player__toggle" type="button" data-player-toggle disabled aria-label="Подключаем магазин">…</button></div>
-        <iframe class="intro-player__embed" allow="autoplay" scrolling="no" frameborder="no" src="about:blank"></iframe>
-        <div class="intro-player__bottom"><span class="intro-player__status" data-player-status>Подключаем звук…</span><a class="intro-player__source" href="https://soundcloud.com/wmzd/magaz-remiks-by-womza" target="_blank" rel="noopener noreferrer">SoundCloud ↗</a></div>
+      <section class="intro-player" data-intro-player data-local-audio="../../assets/artists/woomzzzoid/ne-drug.mp3" data-spectrum="../../assets/artists/woomzzzoid/ne-drug-spectrum.json" data-track="local:(не)друг" data-track-title="(не)друг" data-state="loading" aria-label="Плеер woomzzzoid">
+        <div class="intro-player__top"><div><p class="intro-player__eyebrow">first signal / 01 — local master</p><h2>(не)друг</h2></div><button class="intro-player__toggle" type="button" data-player-toggle disabled aria-label="Подключаем (не)друг">…</button></div>
+        <iframe class="intro-player__embed" aria-hidden="true" scrolling="no" frameborder="no" src="about:blank"></iframe>
+        <div class="intro-player__bottom"><span class="intro-player__status" data-player-status>Подключаем звук…</span><a class="intro-player__source" href="../../assets/artists/woomzzzoid/ne-drug.mp3" target="_blank" rel="noopener noreferrer">открыть трек ↗</a></div>
       </section>
       <div class="service-heading"><h2>На связи</h2><span>03 доступны</span></div>
       <div class="services">

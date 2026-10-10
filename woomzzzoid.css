@@ -1,0 +1,85 @@
+.profile--woomzzzoid {
+  --accent: #62fff0;
+  --accent-soft: #b8fff9;
+  --ink: #e3fffb;
+  --muted: #78aaa4;
+  --line: #20514e;
+  --terminal-ink: #061210;
+  color-scheme: dark;
+  background: #030807;
+}
+.profile--woomzzzoid .woom-spectrum-field {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .78;
+  mix-blend-mode: screen;
+}
+.profile--woomzzzoid .profile-art {
+  background:
+    radial-gradient(circle at var(--pointer-x, 50%) var(--pointer-y, 42%), #55fff01c 0 1px, transparent 21vw),
+    linear-gradient(90deg, #020605d4 0 7%, transparent 30% 70%, #020605df 100%),
+    linear-gradient(180deg, #0308070d 0 52%, #030807d8 100%);
+}
+.profile--woomzzzoid .profile-art::before {
+  content: '';
+  position: absolute;
+  inset: 6% auto auto 4%;
+  width: min(42vw, 620px);
+  height: min(25vw, 330px);
+  opacity: .24;
+  background: url('assets/artists/woomzzzoid/woomzzzoid-logo.png') left center / contain no-repeat;
+  filter: drop-shadow(0 0 18px #62fff0);
+  pointer-events: none;
+}
+.profile--woomzzzoid .profile-art::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: .18;
+  background: repeating-linear-gradient(0deg, transparent 0 3px, #62fff00a 4px, transparent 5px 8px);
+  mix-blend-mode: screen;
+}
+.profile--woomzzzoid .profile-header,
+.profile--woomzzzoid .profile-footer,
+.profile--woomzzzoid .profile-layout { max-width: 1440px; }
+.profile--woomzzzoid .profile-layout { gap: clamp(40px, 7vw, 120px); }
+.profile--woomzzzoid .portrait { position: relative; padding: 8px; border: 1px solid #62fff088; background: #061310d9; box-shadow: 0 0 0 1px #62fff022, 12px 12px 0 #0008; }
+.profile--woomzzzoid .portrait::before { content: 'W / 01'; position: absolute; z-index: 3; top: -13px; right: 22px; padding: 5px 8px; color: var(--terminal-ink); background: var(--accent); font: 9px 'DM Mono', monospace; letter-spacing: .1em; }
+.profile--woomzzzoid .portrait-frame { border: 1px solid #62fff0aa; clip-path: polygon(0 0, 94% 0, 100% 5%, 100% 96%, 95% 100%, 5% 100%, 0 95%); }
+.profile--woomzzzoid .portrait-frame > img { filter: grayscale(1) sepia(.25) hue-rotate(125deg) saturate(1.3) contrast(1.15); mix-blend-mode: screen; }
+.profile--woomzzzoid .portrait-id { color: var(--accent); mix-blend-mode: normal; text-shadow: 0 0 7px #62fff0; }
+.profile--woomzzzoid .portrait-caption { color: var(--accent); background: linear-gradient(transparent, #020807f0); text-shadow: 0 0 9px #62fff0; }
+.profile--woomzzzoid .photo-selector button { border-color: #62fff044; }
+.profile--woomzzzoid .photo-selector button[aria-pressed='true'] { border-color: var(--accent); box-shadow: 0 0 15px #62fff055; }
+.profile--woomzzzoid .photo-selector p { color: var(--muted); }
+.profile--woomzzzoid h1 { color: var(--accent); font-size: clamp(48px, 7vw, 108px); text-shadow: 4px 0 0 #ff3ee844, -3px 0 0 #25a9ffff; }
+.profile--woomzzzoid .artist-kicker { border-left: 2px solid var(--accent); padding-left: 12px; color: var(--accent-soft); }
+.profile--woomzzzoid .artist-intro { color: var(--accent-soft); max-width: 44ch; }
+.profile--woomzzzoid .artist-intro { margin-bottom: 34px; }
+.profile--woomzzzoid .intro-player { border: 1px solid var(--accent); background: #041b18dd; box-shadow: 5px 5px 0 #62fff033, inset 0 0 30px #62fff00d; }
+.profile--woomzzzoid .intro-player h2 { color: var(--accent); font: 600 20px/1.25 'Space Grotesk', sans-serif; letter-spacing: -.02em; }
+.profile--woomzzzoid .intro-player__eyebrow { color: var(--accent); }
+.profile--woomzzzoid .intro-player__toggle { border: 1px solid var(--accent); color: var(--accent); }
+.profile--woomzzzoid .intro-player__toggle:not(:disabled):is(:hover, :focus-visible), .profile--woomzzzoid .intro-player[data-state='playing'] .intro-player__toggle { color: var(--terminal-ink); background: var(--accent); box-shadow: 0 0 17px #62fff077; }
+.profile--woomzzzoid .intro-player__embed { display: none; }
+.profile--woomzzzoid .intro-player__local-audio { display: block; width: 100%; height: 30px; margin-top: 10px; accent-color: var(--accent); filter: invert(1) hue-rotate(125deg) saturate(2); opacity: .8; }
+.profile--woomzzzoid .intro-player__source { color: var(--accent); }
+.profile--woomzzzoid .service-heading { border-color: var(--accent); }
+.profile--woomzzzoid .service-heading h2, .profile--woomzzzoid .service-heading > span { color: var(--accent); }
+.profile--woomzzzoid .service--active { border-bottom-color: #62fff044; }
+.profile--woomzzzoid .service--active .service-action { color: var(--accent); }
+.profile--woomzzzoid .service--active:hover, .profile--woomzzzoid .service--active:focus-visible { color: var(--accent); background: #62fff012; }
+.profile--woomzzzoid .service--active::before { background: var(--accent); box-shadow: 0 0 9px var(--accent); }
+.profile--woomzzzoid .service-icon { border-radius: 0; border-color: var(--accent); color: var(--accent); transform: skew(-8deg); }
+.profile--woomzzzoid .spectrum { height: 63vh; padding: 0 2.5vw; gap: clamp(3px, .35vw, 8px); opacity: calc(.16 + var(--track-energy, 0) * .16); }
+.profile--woomzzzoid .spectrum__bar { background: repeating-linear-gradient(to top, var(--accent) 0 3px, transparent 3px 7px); filter: drop-shadow(0 0 5px #62fff099); }
+@media (max-width: 760px) {
+  .profile--woomzzzoid .profile-art::before { inset: 8% 5% auto; width: 90vw; height: 30vw; }
+  .profile--woomzzzoid .profile-layout { gap: 35px; }
+  .profile--woomzzzoid .spectrum { height: 45vh; opacity: calc(.1 + var(--track-energy, 0) * .1); }
+  .profile--woomzzzoid .woom-spectrum-field { opacity: .62; }
+}
