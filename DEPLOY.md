@@ -48,7 +48,7 @@ cat /var/lib/errorclub-publisher/deployed-revision
 не удаляются автоматически. Для обычного отката используй `git revert` и push.
 
 После публикации проверить публичные страницы артистов, фотографии,
-`assets/audio-analysis/emohead-plevat.json`, спектрограмму woomzzzoid и HTTP Range для MP4. Успешный push
+`assets/audio-analysis/emohead-plevat.json`, спектрограмму woomzzzoid и HTTP Range для фоновых MP4. Успешный push
 сам по себе не подтверждает публикацию: сверяй `deployed-revision` и живой сайт.
 
 ## Исходники рендера

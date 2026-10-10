@@ -1,6 +1,6 @@
 [
   "index.html", "styles.css", "app.js", "artist.css", "artist.js",
-  "artist-player.css", "artist-player.js", "emohead.css", "woomzzzoid.css", "woom-spectrum.js", "signal.css", "signal.js",
+  "artist-player.css", "artist-player.js", "emohead.css", "woomzzzoid.css", "woom-spectrum.js", "katarsis.css", "katarsis-video.js", "signal.css", "signal.js",
   "artists/moralophobia/index.html", "artists/emohead/index.html",
   "artists/woomzzzoid/index.html", "artists/katarsis/index.html",
   "assets/favicon.svg", "assets/grain.svg",
@@ -13,6 +13,7 @@
   "assets/artists/woomzzzoid/woomzzzoid-logo.png", "assets/artists/woomzzzoid/ne-drug.mp3",
   "assets/artists/woomzzzoid/ne-drug-spectrogram.webp", "assets/artists/woomzzzoid/ne-drug-spectrum.json",
   "assets/artists/katarsis/portrait.webp", "assets/artists/katarsis/window.webp",
-  "assets/artists/katarsis/colour.webp", "assets/artists/katarsis/casual.webp",
+  "assets/artists/katarsis/casual.webp", "assets/artists/katarsis/katarsis-background-v36.mp4",
+  "assets/artists/katarsis/katarsis-background-v36-mobile.mp4", "assets/artists/katarsis/katarsis-background-v36-poster.webp",
   "assets/audio-analysis/emohead-plevat.json"
 ]

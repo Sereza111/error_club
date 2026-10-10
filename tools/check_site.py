@@ -26,7 +26,7 @@ def reference(source, value):
 class Links(HTMLParser):
     def handle_starttag(self, tag, attrs):
         for name, value in attrs:
-            if name in {"src", "href", "data-photo", "data-waveform", "data-spectrum", "data-spectrum-field"} and value:
+            if name in {"src", "href", "poster", "data-photo", "data-waveform", "data-spectrum", "data-spectrum-field", "data-desktop", "data-mobile"} and value:
                 reference(self.source, value)
 
 

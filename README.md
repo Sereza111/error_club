@@ -14,10 +14,11 @@ python -m http.server 8765
 
 - `index.html`, `styles.css`, `app.js` — главная и фон из Blender.
 - `artists/<slug>/index.html` — отдельные страницы четырёх артистов.
-- `artist.css`, `emohead.css`, `woomzzzoid.css` — общие и индивидуальные стили.
+- `artist.css`, `emohead.css`, `woomzzzoid.css`, `katarsis.css` — общие и индивидуальные стили.
 - `artist.js`, `signal.js` — фотографии и терминальное наведение.
 - `artist-player.js` — SoundCloud Widget API, попытка автозапуска и ручной плеер.
 - `woom-spectrum.js` — интерактивное спектральное поле woomzzzoid: из данных трека.
+- `katarsis-video.js` — адаптивный зацикленный видеофон катарсиса, интерактивная область сигнала и reduced-motion режим.
 - `assets/audio-analysis/emohead-plevat.json` — публичная амплитудная волна трека.
 - `assets/artists/woomzzzoid/ne-drug-spectrum.json` — спектрограмма и энергия `(не)друг`.
 - `site-manifest.json` — точный список публикуемых файлов.
